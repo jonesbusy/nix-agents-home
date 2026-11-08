@@ -40,7 +40,11 @@
         hermes = hermesModule;
         opencode = opencodeModule;
         default = { ... }: {
-          imports = [ piModule hermesModule opencodeModule ];
+          imports = [
+            piModule
+            hermesModule
+            opencodeModule
+          ];
         };
       };
       testConfig = home-manager.lib.homeManagerConfiguration {
@@ -56,6 +60,8 @@
       };
     in
     {
+      formatter.${system} = pkgs.nixfmt-tree;
+
       homeManagerModules = modules;
 
       checks.${system}.home-manager-modules =

@@ -7,6 +7,7 @@ This flake exports reusable Home Manager modules for agent applications. Keep ap
 Stage new and modified files before evaluating the flake so Nix includes them. Run:
 
 ```sh
+nix fmt -- --ci
 bash tests/hermes-state.sh
 nix eval --impure --file tests/modules.nix
 nix flake check --no-build

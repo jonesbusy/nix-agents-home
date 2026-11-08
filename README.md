@@ -40,6 +40,7 @@ Keep application configuration in your own Home Manager modules. Agent skills ar
 With Nix flakes and `prek` installed, run:
 
 ```sh
+nix fmt -- --ci
 bash tests/hermes-state.sh
 nix eval --impure --file tests/modules.nix
 nix flake check --no-build
