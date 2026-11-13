@@ -11,7 +11,10 @@
 
     pi.url = "github:earendil-works/pi/v1.5.2";
 
-    opencode.url = "github:anomalyco/opencode/v2.2.6";
+    opencode = {
+      url = "github:anomalyco/opencode/v2.2.6";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     hermes-agent = {
       url = "github:NousResearch/hermes-agent/v0.23.1";

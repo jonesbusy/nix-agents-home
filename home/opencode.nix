@@ -7,7 +7,7 @@ let
     if opencodePackage.version == "2.2.6+dc2ffcf" then
       opencodePackage.overrideAttrs (old: {
         node_modules = old.node_modules.overrideAttrs (_: {
-          outputHash = "sha256-s8XswivimwgzG0wMleHee5zliDKd+UC84eAvBvzr6cI=";
+          outputHash = "sha256-O2hF8pGUSArKgYBeP99oOW3iXVVZl5bV5WPTp3E7JIA=";
         });
       })
     else
