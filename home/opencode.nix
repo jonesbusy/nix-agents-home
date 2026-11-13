@@ -2,12 +2,14 @@
 { pkgs, ... }:
 let
   opencodePackage = opencode.packages.${pkgs.stdenv.hostPlatform.system}.opencode;
-  # shortcut: v2.2.6 has an incorrect upstream node_modules hash; remove when upgrading to a release with a corrected hash.
+  # shortcut: v2.3.0's upstream x86_64-linux node_modules hash is stale; remove when upstream updates it.
   package =
-    if opencodePackage.version == "2.2.6+dc2ffcf" then
+    if
+      opencodePackage.version == "2.3.0+a6b15d3" && pkgs.stdenv.hostPlatform.system == "x86_64-linux"
+    then
       opencodePackage.overrideAttrs (old: {
         node_modules = old.node_modules.overrideAttrs (_: {
-          outputHash = "sha256-O2hF8pGUSArKgYBeP99oOW3iXVVZl5bV5WPTp3E7JIA=";
+          outputHash = "sha256-PYcpyYP/i0e6ZIt27u1tFYbjU4Cl848w77dU1NiIEls=";
         });
       })
     else
