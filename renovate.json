@@ -11,12 +11,6 @@
   "lockFileMaintenance": {
     "enabled": true
   },
-  "packageRules": [
-    {
-      "matchPackageNames": ["anomalyco/opencode"],
-      "allowedVersions": "/^2\\./"
-    }
-  ],
   "customManagers": [
     {
       "customType": "regex",
@@ -35,7 +29,7 @@
       "description": "Track stable OpenCode GitHub releases",
       "managerFilePatterns": ["/^flake\\.nix$/"],
       "matchStrings": [
-        "opencode\\.url\\s*=\\s*\\\"github:anomalyco/opencode/v(?<currentValue>2\\.[0-9]+\\.[0-9]+)\\\";"
+        "opencode\\.url\\s*=\\s*\\\"github:anomalyco/opencode/v(?<currentValue>[0-9]+\\.[0-9]+\\.[0-9]+)\\\";"
       ],
       "depNameTemplate": "opencode",
       "packageNameTemplate": "anomalyco/opencode",
