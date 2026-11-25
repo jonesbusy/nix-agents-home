@@ -9,7 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    pi.url = "github:earendil-works/pi/v1.6.0";
+    pi.url = "github:earendil-works/pi/v1.6.1";
 
     opencode = {
       url = "github:anomalyco/opencode/v2.4.1";
