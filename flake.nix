@@ -12,7 +12,7 @@
     pi.url = "github:earendil-works/pi/v1.6.1";
 
     opencode = {
-      url = "github:anomalyco/opencode/v2.4.1";
+      url = "github:anomalyco/opencode/v2.4.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
